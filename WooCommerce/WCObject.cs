@@ -5,27 +5,29 @@ using WooCommerceNET.Base;
 
 namespace WooCommerceNET.WooCommerce
 {
-    /// <summary>
-    /// Base WoCommerce object
-    /// </summary>
-    /// <typeparam name="T1">Coupon</typeparam>
-    /// <typeparam name="T2">Customer</typeparam>
-    /// <typeparam name="T3">Order</typeparam>
-    /// <typeparam name="T4">OrderNote</typeparam>
-    /// <typeparam name="T5">OrderRefund</typeparam>
-    /// <typeparam name="T6">Product</typeparam>
-    /// <typeparam name="T7">ProductCategory</typeparam>
-    /// <typeparam name="T8">ProductAttribute</typeparam>
-    /// <typeparam name="T9">ProductAttributeTerm</typeparam>
-    /// <typeparam name="T10">ShippingClass</typeparam>
-    /// <typeparam name="T11">ProductTag</typeparam>
-    /// <typeparam name="T12">TaxRate</typeparam>
-    /// <typeparam name="T13">TaxClass</typeparam>
-    /// <typeparam name="T14">Webhook</typeparam>
-    public class WCObject<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+	/// <summary>
+	/// Base WoCommerce object
+	/// </summary>
+	/// <typeparam name="T1">Coupon</typeparam>
+	/// <typeparam name="T2">Customer</typeparam>
+	/// <typeparam name="T3">Order</typeparam>
+	/// <typeparam name="T4">OrderNote</typeparam>
+	/// <typeparam name="T5">OrderRefund</typeparam>
+	/// <typeparam name="T6">Product</typeparam>
+	/// <typeparam name="T7">ProductCategory</typeparam>
+	/// <typeparam name="T8">ProductAttribute</typeparam>
+	/// <typeparam name="T9">ProductAttributeTerm</typeparam>
+	/// <typeparam name="T10">ShippingClass</typeparam>
+	/// <typeparam name="T11">ProductTag</typeparam>
+	/// <typeparam name="T12">TaxRate</typeparam>
+	/// <typeparam name="T13">TaxClass</typeparam>
+	/// <typeparam name="T14">Webhook</typeparam>
+	/// <typeparam name="T15">Subscription</typeparam>
+	public class WCObject<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
         where T1 : Coupon where T2 : Customer where T3 : Order where T4 : OrderNote where T5 : OrderRefund
         where T6 : Product where T7 : ProductCategory where T8 : ProductAttribute where T9 : ProductAttributeTerm
         where T10 : ShippingClass where T11 : ProductTag where T12 : TaxRate where T13 : TaxClass where T14 : Webhook
+		where T15 : Subscription
     {
         protected RestAPI API;
         public WCObject(RestAPI api)
@@ -611,7 +613,7 @@ namespace WooCommerceNET.WooCommerce
         #endregion
     }
     public class WCObject : WCObject<Coupon, Customer, Order, OrderNote, OrderRefund, Product, ProductCategory,
-                                    ProductAttribute, ProductAttributeTerm, ShippingClass, ProductTag, TaxRate, TaxClass, Webhook>
+                                    ProductAttribute, ProductAttributeTerm, ShippingClass, ProductTag, TaxRate, TaxClass, Webhook, Subscription>
     {
         public WCObject(RestAPI api) : base(api)
         {
