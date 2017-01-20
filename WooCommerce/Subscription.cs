@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
 using WooCommerceNET.Base;
 
 namespace WooCommerceNET.WooCommerce
 {
-	[DataContract]
+    [DataContract]
 	public class Subscription : JsonObject
 	{
 		/// <summary>

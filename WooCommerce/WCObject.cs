@@ -611,6 +611,16 @@ namespace WooCommerceNET.WooCommerce
         }
 
         #endregion
+
+        #region "Subscriptions..."
+
+        public async Task<List<T15>> GetSubscriptions(Dictionary<string, string> parms = null)
+		{
+			string json = await API.SendHttpClientRequest("subscriptions", RequestMethod.GET, string.Empty, parms);
+			return API.DeserializeJSon<List<T15>>(json);
+		}
+
+        #endregion
     }
     public class WCObject : WCObject<Coupon, Customer, Order, OrderNote, OrderRefund, Product, ProductCategory,
                                     ProductAttribute, ProductAttributeTerm, ShippingClass, ProductTag, TaxRate, TaxClass, Webhook, Subscription>
