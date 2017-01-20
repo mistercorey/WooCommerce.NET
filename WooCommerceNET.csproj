@@ -62,6 +62,7 @@
     <Compile Include="WooCommerce\Order.cs" />
     <Compile Include="WooCommerce\Product.cs" />
     <Compile Include="WooCommerce\Report.cs" />
+    <Compile Include="WooCommerce\Subscription.cs" />
     <Compile Include="WooCommerce\Tax.cs" />
     <Compile Include="WooCommerce\WCObject.cs" />
     <Compile Include="WooCommerce\Webhook.cs" />
